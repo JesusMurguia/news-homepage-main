@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
   min-height: 100vh;
-  width: min(80rem, 100% - 2rem);
+  width: min(72rem, 100% - 2rem);
 
   --soft-orange: hsl(35, 77%, 62%);
   --soft-red: hsl(5, 85%, 63%);
