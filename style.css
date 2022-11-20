@@ -1,7 +1,7 @@
 body {
   margin: 0 auto;
   min-height: 100vh;
-  width: min(70rem, 100% - 2rem);
+  width: min(80rem, 100% - 2rem);
 
   --soft-orange: hsl(35, 77%, 62%);
   --soft-red: hsl(5, 85%, 63%);
@@ -110,19 +110,19 @@ nav a:hover {
 .container {
   display: grid;
   grid-template-areas:
-    "main main aside"
-    "main main aside"
-    "article article article";
+    "main main new"
+    "main main new"
+    "top top top";
   gap: 2rem;
   flex-wrap: wrap;
 }
 
-aside {
-  grid-area: aside;
+.new-grid {
+  grid-area: new;
 }
 
-article {
-  grid-area: article;
+.top-grid {
+  grid-area: top;
 }
 
 /* MAIN */
@@ -171,17 +171,17 @@ h1 {
   padding-right: 3rem;
 }
 
-/* ASIDE */
-aside {
+/* NEW */
+.new {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1.5rem;
   background: var(--very-dark-blue);
   color: var(--off-white);
 }
 
-aside > div:first-child {
+.new > div:first-child {
   font-size: 2.5rem;
   color: var(--soft-orange);
   font-weight: 700;
@@ -212,7 +212,7 @@ hr {
   padding-block: 0.5rem;
 }
 
-/* ARTICLE */
+/* TOP */
 .top-grid {
   margin-top: 2rem;
   display: grid;
@@ -236,18 +236,19 @@ hr {
   font-size: 2rem;
   font-weight: 700;
 }
-.top-card-content > div:nth-child(2) {
+.top-card-content > h2 {
   color: var(--very-dark-blue);
   font-size: 1rem;
   font-weight: 900;
+  margin: 0;
 }
 
 @media (max-width: 825px) {
   .container {
     grid-template-areas:
       "main"
-      "aside"
-      "article";
+      "new"
+      "top";
   }
 
   .main-content {

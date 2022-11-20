@@ -1,4 +1,4 @@
-let menu = document.getElementById("menu");
+let menu = document.querySelector(".menu-btn");
 
 function toggleMobileMenu() {
   menu.classList.toggle("open");
